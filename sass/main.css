@@ -5,15 +5,52 @@
           box-sizing: border-box;
 }
 
-h1 {
-  color: red;
+html {
+  font-size: 62.5%;
 }
 
 .main_header {
   width: 100vw;
   height: 100vh;
-  display: -ms-grid;
-  display: grid;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #2ecc71;
+}
+
+.main_header h1 {
+  color: yellow;
+  font-size: 10rem;
+  letter-spacing: 0.5rem;
+  text-transform: capitalize;
+}
+
+.main_header h1:hover {
+  color: white;
+}
+
+.main_header h1::after {
+  content: ' SCSS';
+}
+
+.main_header p {
+  color: yellow;
+  font-size: 10rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.main_header p:hover {
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */

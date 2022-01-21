@@ -1,15 +1,44 @@
+@import 'mixin';
+@import 'var';
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-
-h1 {
-	color: red;
+html {
+	font-size: 62.5%;
 }
+//1. Operators
+//2. Variable
+//3. Nesting
+//4. Mixin
+//5. Parameters or arguments passing
+//6. Partials
 .main_header {
 	width: 100vw;
 	height: 100vh;
-	display: grid;
-	text-align: center;
+	@include flexProb;
+	background: $bg-color;
+	// Nesting h1 and p with main_header
+	h1 {
+		// put the parameter or argument value
+		@include commonCode(0.5rem, capitalize);
+		//letter-spacing: 0.5rem;
+		// write and operator for child class
+		&:hover {
+			color: white;
+		}
+		&::after {
+			content: ' SCSS';
+		}
+	}
+	p {
+		// put the parameter or argument value
+		@include commonCode(0.3rem, uppercase);
+		//letter-spacing: 0.3rem;
+		// write and operator for child class
+		&:hover {
+			color: white;
+		}
+	}
 }
